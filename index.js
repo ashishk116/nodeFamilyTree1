@@ -27,7 +27,7 @@ const admin =(req,res) =>{
 app.get('/admin',admin);
 
 app.get('/', (req, res) => {
-  res.send('Hello Word!')
+  res.send('Hello WordAS!')
 })
 
 //Middlewares
