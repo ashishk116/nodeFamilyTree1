@@ -17,7 +17,7 @@ mongoose.connect(process.env.DATABASE,
 }).then(()=>{console.log('DB CONNECTED')})
 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 
 
 const admin =(req,res) =>{
