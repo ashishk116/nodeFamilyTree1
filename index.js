@@ -21,7 +21,7 @@ const port = process.env.PORT || 3000
 
 
 const admin =(req,res) =>{
-  res.send('Admin route')
+  res.send('Admin routeAS')
 }
 
 app.get('/admin',admin);
@@ -37,7 +37,6 @@ app.use(cors());
 
 
 //myroutes
-
 app.use('/api',authRoutes);
 
 app.listen(port, () => {

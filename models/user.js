@@ -5,7 +5,6 @@ const crypto = require('crypto');
 const userSchema = new mongoose.Schema({
   name :{
       type:String,
-      required:true,
       maxlength:32,
       trim:true
   },
@@ -60,7 +59,7 @@ userSchema.methods = {
 
         try {
             return crypto.createHmac('sha256', this.salt)
-            .update('I love cupcakes')
+            
             .digest('hex');
         } catch (err) {
             return "";
