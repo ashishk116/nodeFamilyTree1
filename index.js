@@ -30,6 +30,10 @@ app.get('/', (req, res) => {
   res.send('Hello WordAS!')
 })
 
+app.post('/check', (req, res) => {
+  res.send('Hello WordAS!')
+})
+
 //Middlewares
 app.use(bodyParser.json());
 app.use(cookieParser());

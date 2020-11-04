@@ -14,8 +14,6 @@ check("password","password should be 3char").isLength({min:3}),
 
 ,signup),
 
-router.get("/signout",(req, res) => {
-    res.send('Signout !')
-  })
+router.get("/signout",signout)
 
 module.exports=router;
