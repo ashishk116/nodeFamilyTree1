@@ -21,7 +21,7 @@ const port = process.env.PORT || 3000
 
 
 const admin =(req,res) =>{
-  res.send('Admin routeAS')
+  res.send('Admin routeASh')
 }
 
 app.get('/admin',admin);
