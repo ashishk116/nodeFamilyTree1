@@ -98,7 +98,7 @@ exports.signout =(req,res)=>{
  //custom middleware
 
  exports.isAuthenticated=(req,res,next)=>{
-let checker = req.profile && req.auth && req.profile._id=== req.auth._id
+let checker = req.profile && req.auth && req.profile._id == req.auth._id
 if(!checker){
    return res.status(403).json({
        error:"ACCESS Denied"
@@ -117,3 +117,12 @@ if(!checker){
     next();
  }
  
+ exports.isOwner=(req,res,next)=>{
+
+    if(req.profile._id===0&&1){
+        return res.status(403).json({
+            error:"Admin Credential check"
+        });
+     }
+    next();
+ }

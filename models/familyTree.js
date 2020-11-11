@@ -1,23 +1,21 @@
-import mongoose from 'mongoose';
+const mongoose =require("mongoose");
 const { Schema } = mongoose;
-const {ObjectId} = mongoose.Schema;
-const familyTreeSchema = new Schema({
-
-    name:{
-        type:String,
-        required:true,
-        trim:true,
-        maxlength:32
+const familytreeSchema = new mongoose.Schema(
+    {
+        name:{
+            type:String,
+            required:true,
+            trim:true,
+            maxlength:32 
+        },
+        familyuniqueid:{
+            type:Number,
+            required:true,
+            unique:true,
+            maxlength:32
+        },
     },
-    relation:{
-        type:ObjectId,
-        ref:"Relation",
-        required:true
-    },
-    photo:{
-        data:Buffer,
-        contentType:String
-    }
-},{timestamps:true})
+    { timestamps: true }
+  );
 
-module.exports=mongoose.model("FamilyTree",familyTreeSchema);
+  module.exports=mongoose.model("FamilyTree", familytreeSchema);
