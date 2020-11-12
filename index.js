@@ -8,6 +8,8 @@ const cors=require('cors')
 const authRoutes=require("./routes/auth")
 const userRoutes=require("./routes/user")
 const familytreeRoutes=require("./routes/familytree")
+const memberRoutes=require("./routes/member")
+
 
 
 
@@ -47,6 +49,8 @@ app.use(cors());
 app.use('/api',authRoutes);
 app.use('/api',userRoutes);
 app.use('/api',familytreeRoutes);
+app.use('/api',memberRoutes);
+
 
 
 
