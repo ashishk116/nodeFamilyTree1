@@ -11,7 +11,7 @@ router.param("memberId",getMemberById);
 
 
 //actual routes
-router.post("/member/create/:userId",isSignedIn,isAuthenticated,createMember);
+router.post("/member/create/:userId",isSignedIn,isAuthenticated,isAdmin,createMember);
 
 
 module.exports= router;
