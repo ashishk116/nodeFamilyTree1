@@ -19,6 +19,20 @@ exports.getMemberById=(req,res,next,id)=>{
     })
 }
 
+exports.getMembers=(req,res)=>{
+    Member.find().exec((err,members)=>{
+
+        if(err || !members){
+            return res.status(400).json({
+                error:"No members found"
+            })
+        }
+
+        res.json(members);
+    })
+}
+
+
 exports.createMember=(req,res)=>{
 let form= new formidable.IncomingForm()
 form.keepExtensionse=true;

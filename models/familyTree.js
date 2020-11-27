@@ -1,5 +1,6 @@
 const mongoose =require("mongoose");
 const { Schema } = mongoose;
+const {ObjectId} = mongoose.Schema;
 const familytreeSchema = new mongoose.Schema(
     {
         name:{
@@ -13,6 +14,11 @@ const familytreeSchema = new mongoose.Schema(
             required:true,
             unique:true,
             maxlength:32
+        },
+        familyowner:{
+            type:ObjectId,
+            ref:"User",
+            required:true
         },
     },
     { timestamps: true }

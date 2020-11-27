@@ -13,16 +13,12 @@ const memberSchema = new Schema({
         type:ObjectId,
         ref:"FamilyTree",
         required:true
-    },
-    familyowner:{
-        type:ObjectId,
-        ref:"User",
-        required:true
-    },
+    }, 
     relation:{
         type:String,
         required:true
     },
+    
     photo:{
         data:Buffer,
         contentType:String
