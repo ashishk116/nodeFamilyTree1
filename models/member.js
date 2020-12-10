@@ -11,8 +11,7 @@ const memberSchema = new Schema({
     },
     familytree:{
         type:ObjectId,
-        ref:"FamilyTree",
-        required:true
+        ref:"FamilyTree"
     }, 
     relation:{
         type:String,

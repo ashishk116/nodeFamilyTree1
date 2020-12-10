@@ -48,7 +48,7 @@ form.parse(req,(err,fields,file)=>{
     //destructuring the fields
     const{name,familytree,relation,familyowner}=fields;
 
-    if(!name||!familytree||!relation||!familyowner){
+    if(!name||!familytree||!relation){
         res.status(400).json({
             error:"Please include all fields"
         })
